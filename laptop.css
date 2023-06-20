@@ -1,0 +1,230 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    padding: 15px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+.navbar.closed {
+    transform: translateX(-240px); /* Menyembunyikan navbar saat ditutup */
+}
+
+body {
+    background-color: #1E90FF;
+    
+}
+
+object {
+    position: fixed;
+    top: -130px;
+    left: 0px;
+    width: calc(100% - 240px);
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.us {
+    margin-left: 260px;
+   
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    color: #ffff; 
+}
+.us h1{
+        font-size:6rem;  
+        margin-top:6rem;
+}
+.us p {
+    margin-top: 20px;
+}
+
+.kotak {
+    display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+justify-items: center;
+justify-content: center;
+align-items: center;
+padding-left: 20rem;
+padding-right: 7rem;
+background-color: #F5F8FA;
+z-index: 0;
+margin-top:-0.1rem;
+padding-top:1rem;
+
+
+}
+
+.image-container {
+    position: relative;
+    aspect-ratio: 16/9; /* Ubah angka perbandingan sesuai kebutuhan Anda */
+    max-width: 100%;
+    width: 200px;
+    flex: wrap;
+    flex: 1 0 160px;
+    margin: 10px;
+   
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    box-shadow: 0px -6px 12px rgba(117, 151, 170, 0.06), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image-container p{
+    margin-left:20px;
+}
+
+.image-container img {
+    justify-content: center;
+    width: 100%;
+    max-width: 170px;
+    padding: 3rem;
+  
+    transition: transform 0.3s ease;
+}
+p{
+    margin-bottom: 100px;
+}
+
+.kotak img {
+    margin: 0 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.kotak img:hover {
+    transform: scale(1.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.open-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    color: #ffff;
+}
+
+.navbar ul img {
+    width: 30px;
+    height: 30px;
+    margin-right:10px;
+}
+
+.navbar li {
+    display: inline-block; /* Menampilkan li secara horizontal */
+    margin-left: 10px; /* Memberi jarak antara li */
+    align-items: center; /* Mengatur vertikal tengah */
+    margin-bottom: 10px; /* Memberi jarak antara li */
+}
+
+.navbar li img {
+    margin-left: 5px; /* Memberi jarak antara gambar dan teks */
+    width: 20px; /* Lebar gambar */
+    height: 20px; /* Tinggi gambar */
+}
+.modal {
+    display: none; /* Semula modal disembunyikan */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); font-weight: 100;
+    
+}
+.modal input{
+    outline:none;
+    border:none;
+    box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    border-radius:10px;
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color:#6094E2;
+   
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    margin-top:5rem;
+    width:8rem;
+    background-color: #fff;
+    box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -1px 1px 20px 0px rgba(0,0,0,0.44);
+    border-radius:10px;
+}
+
+/* ini untuk responsive */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        transform: translateX(-150%);
+    }
+
+    .us {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .kotak {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .kotak img {
+        margin: 10px;
+        width: auto;
+        max-width: 200px;
+    }
+}
+object{
+    width:100%;
+}
+
+.open-button {
+    left: 10px;
+}
